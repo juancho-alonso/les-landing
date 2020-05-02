@@ -9,6 +9,7 @@
 	<meta name="Local tour operator in Sydney" content="Let's Explore Sydney">
 	<meta name="Juancho" content="SitePoint">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="./images/cover.jpg">
 	<link rel="stylesheet" href="./css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/bf35b084d0.js" crossorigin="anonymous"></script>
@@ -37,9 +38,7 @@
 		</nav>
 		<header class="header">
 			<div class="video-container">
-				<iframe width="560" height="100%"
-					src="https://www.youtube.com/embed/J363K6R9OVQ?controls=0&amp;start=8?autoplay=1" frameborder="0"
-					allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<video autoplay loop muted playsinline src="./images/bondi-video-1.mp4"></video>
 			</div>
 			<div class="logo-button-container">
 				<div class="logo-box">
@@ -49,38 +48,40 @@
 
 			</div>
 		</header>
-		<section class="intro-section">
-			<div class="container">
-				<div class="intro-section-text">
-					<h1>HELLO AND WELCOME TO SYDNEY!</h1>
-					<p>Be it for business or pleasure, Sydney is host to a huge variety of world famous attractions. we
-						want to
-						share these with you.
-						Whether you are a regular traveller, or this is your first time to Sydney, be sure to book with
-						us for an
-						adventure you won’t ever forget.
-						Come on, Lets Explore Sydney!</p>
-					<p>Dan and the team.</p>
-				</div>
-			</div>
-		</section>
-		<section class="intro-section-image">
-			<div class="container">
-				<div class="intro-section-image-dots">
-					<div class="intro-box-image">
-						<img src="./images/carousel1.png">
-					</div>
-					<div class="intro-section-dots">
-						<div class="intro-section-dot"></div>
-						<div class="intro-section-dot"></div>
-						<div class="intro-section-dot"></div>
-						<div class="intro-section-dot"></div>
-						<div class="intro-section-dot"></div>
-						<div class="intro-section-dot"></div>
+		<div class="intro-main-container">
+			<section class="intro-section">
+				<div class="container container-intro">
+					<div class="intro-section-text">
+						<h1>HELLO AND WELCOME TO SYDNEY!</h1>
+						<p>Be it for business or pleasure, Sydney is host to a huge variety of world famous attractions. we
+							want to
+							share these with you.
+							Whether you are a regular traveller, or this is your first time to Sydney, be sure to book with
+							us for an
+							adventure you won’t ever forget.
+							Come on, Lets Explore Sydney!</p>
+						<p>Dan and the team.</p>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+			<section class="intro-section-image">
+				<div class="container">
+					<div class="intro-section-image-dots">
+						<div class="intro-box-image">
+							<img src="./images/carousel1.png">
+						</div>
+						<div class="intro-section-dots">
+							<div class="intro-section-dot"></div>
+							<div class="intro-section-dot"></div>
+							<div class="intro-section-dot"></div>
+							<div class="intro-section-dot"></div>
+							<div class="intro-section-dot"></div>
+							<div class="intro-section-dot"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 		<section class="tours-section">
 			<div class="container">
 				<div class="tours-container">
@@ -100,7 +101,7 @@
 								</div>
 								<div class="tours-features-others">
 									<span class="tours-fitness">Fitness: Medium / </span>
-									<span class="tours-price">$200pp</span>	
+									<span class="tours-price">$200pp</span>
 								</div>
 							</div>
 						</div>
@@ -123,7 +124,7 @@
 								</div>
 								<div class="tours-features-others">
 									<span class="tours-fitness">Fitness: High / </span>
-									<span class="tours-price">$700pp</span>	
+									<span class="tours-price">$700pp</span>
 								</div>
 							</div>
 						</div>
@@ -146,7 +147,7 @@
 								</div>
 								<div class="tours-features-others">
 									<span class="tours-fitness">Fitness: Medium / </span>
-									<span class="tours-price">$200pp</span>	
+									<span class="tours-price">$200pp</span>
 								</div>
 							</div>
 						</div>
@@ -169,7 +170,7 @@
 								</div>
 								<div class="tours-features-others">
 									<span class="tours-fitness">Fitness: Medium / </span>
-									<span class="tours-price">$270pp</span>	
+									<span class="tours-price">$270pp</span>
 								</div>
 							</div>
 						</div>
@@ -192,7 +193,7 @@
 								</div>
 								<div class="tours-features-others">
 									<span class="tours-fitness">Fitness: Medium / </span>
-									<span class="tours-price">$270pp</span>	
+									<span class="tours-price">$270pp</span>
 								</div>
 							</div>
 						</div>
@@ -215,7 +216,7 @@
 								</div>
 								<div class="tours-features-others">
 									<span class="tours-fitness">Fitness: High / </span>
-									<span class="tours-price">$300pp</span>	
+									<span class="tours-price">$300pp</span>
 								</div>
 							</div>
 						</div>
@@ -224,11 +225,7 @@
 
 
 				</div>
-				<div class="tour-arrows-container">
-					<div class="tour-arrows">
-						<i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i>
-					</div>
-				</div>
+				<i class="fas fa-chevron-left" id="tours-left-arrow"></i><i class="fas fa-chevron-right" id="tours-right-arrow"></i>
 				<div class="book-now-button">
 					<button>Book Now</button>
 				</div>
@@ -248,52 +245,67 @@
 			<div class="container">
 				<div class="safety-tiles-container">
 					<div class="safety-tile">
-						<div class="safety-icon-and-title">
-							<div class=safety-icon-background><i class="fas fa-sun"></i></div>
-							<span class="safety-tile-title">Sun Protection</span>
+						<div class="safety-tile-content">
+							<div class="safety-icon-and-title">
+								<div class=safety-icon-background><i class="fas fa-sun"></i></div>
+								<span class="safety-tile-title">Sun Protection</span>
+							</div>
+							<p class="safety-tile-paragraph">We strongly encourage you to wear sunscreen and a hat to
+								protect yourself from the stunning yet burning Australian sun!</p>
 						</div>
-						<p class="safety-tile-paragraph"></p>
 					</div>
 					<div class="safety-tile">
-						<div class="safety-icon-and-title">
-							<div class=safety-icon-background><i class="fas fa-cloud-rain"></i></div>
-							<span class="safety-tile-title">Wet Weather</span>
+						<div class="safety-tile-content">
+							<div class="safety-icon-and-title">
+								<div class=safety-icon-background><i class="fas fa-cloud-rain"></i></div>
+								<span class="safety-tile-title">Wet Weather</span>
+							</div>
+							<p class="safety-tile-paragraph"></p>
 						</div>
-						<p class="safety-tile-paragraph"></p>
 					</div>
 					<div class="safety-tile">
-						<div class="safety-icon-and-title">
-							<div class=safety-icon-background><i class="fas fa-tint"></i></div>
-							<span class="safety-tile-title">Hydration</span>
+						<div class="safety-tile-content">
+							<div class="safety-icon-and-title">
+								<div class=safety-icon-background><i class="fas fa-tint"></i></div>
+								<span class="safety-tile-title">Hydration</span>
+							</div>
+							<p class="safety-tile-paragraph"></p>	
 						</div>
-						<p class="safety-tile-paragraph"></p>
 					</div>
 					<div class="safety-tile">
-						<div class="safety-icon-and-title">
-							<div class=safety-icon-background><i class="fas fa-bolt"></i></div>
-							<span class="safety-tile-title">Lightning</span>
+						<div class="safety-tile-content">
+							<div class="safety-icon-and-title">
+								<div class=safety-icon-background><i class="fas fa-bolt"></i></div>
+								<span class="safety-tile-title">Lightning</span>
+							</div>
+							<p class="safety-tile-paragraph">During severe lightning storms our guides will follow
+								standard procedures to ensure the safety of all our guests. On the approach of a severe
+								lightning storm, our guides will find a safe place to wait out the storm.</p>	
 						</div>
-						<p class="safety-tile-paragraph"></p>
 					</div>
 					<div class="safety-tile">
-						<div class="safety-icon-and-title">
-							<div class=safety-icon-background><i class="fas fa-shoe-prints"></i></div>
-							<span class="safety-tile-title">Footwear</span>
+						<div class="safety-tile-content">
+							<div class="safety-icon-and-title">
+								<div class=safety-icon-background><i class="fas fa-shoe-prints"></i></div>
+								<span class="safety-tile-title">Footwear</span>
+							</div>
+							<p class="safety-tile-paragraph"></p>	
 						</div>
-						<p class="safety-tile-paragraph"></p>
 					</div>
 					<div class="safety-tile">
-						<div class="safety-icon-and-title">
-							<div class=safety-icon-background><i class="fas fa-swimmer"></i></div>
-							<span class="safety-tile-title">Swimming</span>
+						<div class="safety-tile-content">
+							<div class="safety-icon-and-title">
+								<div class=safety-icon-background><i class="fas fa-swimmer"></i></div>
+								<span class="safety-tile-title">Swimming</span>
+							</div>
+							<p class="safety-tile-paragraph"></p>	
 						</div>
-						<p class="safety-tile-paragraph"></p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="faq-meeting-section">
-			<div class="container">
+			<div class="container container-faq">
 				<div class="faq-section">
 					<h1>FRECUENTLY ASKED QUESTIONS</h1>
 					<div class="question-tiles">
@@ -377,7 +389,7 @@
 						</form>
 					</div>
 				</div>
-				<button>Send</button>
+				<button class="send-button">Send</button>
 			</div>
 		</section>
 		<footer>
