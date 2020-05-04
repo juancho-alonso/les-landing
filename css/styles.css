@@ -452,7 +452,6 @@ video {
     height: fit-content;
     width: 100%;
     border-bottom: white solid 2px;
-    text-align: left;
 }
 
 .faq-section h1 {
@@ -518,7 +517,6 @@ h6 {
 
 .booking-section h1{
     border-bottom: solid black 2px;
-    text-align: left;
 }
 
 .booking-section .container {
@@ -624,6 +622,11 @@ button:hover{
         display: none;
     }
 
+    h1 {
+        font-size: 40px;
+        text-align: left;
+    }
+
     .menu-box {
         display: grid;
         height: 30px;
@@ -672,8 +675,6 @@ button:hover{
     }
     
     .intro-section-text h1 {
-        text-align: left;
-        font-size: 40px;
         margin: 0;
     }
 
@@ -739,10 +740,6 @@ button:hover{
         padding: 50px;
     }
 
-    .safety-section h1 {
-        text-align: left;
-    }
-
     .safety-tiles-container {
         flex-wrap: wrap;
         justify-content: center;
@@ -768,5 +765,22 @@ button:hover{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    #message {
+        padding-bottom: 170px;
+    }
+
+    .name-mail-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .name-container {
+        width: 48.5%;
+    }
+
+    .email-container {
+        width: 48.5%;
     }
 }

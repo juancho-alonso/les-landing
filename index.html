@@ -321,7 +321,7 @@
 		<section class="faq-meeting-section">
 			<div class="container container-faq">
 				<div class="faq-section">
-					<h1>FRECUENTLY ASKED QUESTIONS</h1>
+					<h1>FAQ</h1>
 					<div class="question-tiles">
 						<div class="question-tile">
 							<div class="question-and-icon">
@@ -410,26 +410,28 @@
 			<div class="container">
 				<h1>BOOK YOUR TRIP</h1>
 				<div class="form-container">
-					<div class="name-container">
-						<form action="/action_page.php">
-							<label for="fullname">Full Name</label>
-							<input type="text" id="full-name" name="fullname" placeholder="Jane Doe">
-						</form>
-					</div>
-					<div class="email-container">
-						<form>
-							<label for="email">Email</label>
-							<input type="email" id="email" name="email" placeholder="janedoe@mail.com">
-						</form>
+					<div class="name-mail-container">
+						<div class="name-container">
+							<form action="/action_page.php">
+								<label for="fullname" class="labels">Full Name</label>
+								<input type="text" id="full-name" class="inputs" name="fullname" placeholder="Jane Doe">
+							</form>
+						</div>
+						<div class="email-container">
+							<form>
+								<label for="email" class="labels">Email</label>
+								<input type="email" id="email" class="inputs" name="email" placeholder="janedoe@mail.com">
+							</form>
+						</div>
 					</div>
 					<div class="message-container">
 						<form action="/action_page.php">
-							<label for="message">Message</label>
-							<input type="text" id="message" name="message" placeholder="Your message, here...">
+							<label for="message" class="labels">Message</label>
+							<input type="text" id="message" class="inputs" name="message" placeholder="Your message, here...">
 						</form>
 					</div>
 				</div>
-				<button class="send-button">Send</button>
+				<button class="send-button" id="send-btn" onclick="checkInputs()">Send</button>
 			</div>
 		</section>
 		<footer>
