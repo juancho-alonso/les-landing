@@ -18,25 +18,28 @@
 
 <body>
 	<main>
+		<div id="home"></div>
 		<nav>
 			<div class="hamburger-box">
 				<i class="fas fa-bars" id="hamburger-icon"></i>
 			</div>
 			<div class="menu-box">
 				<ul class="menu-list">
-					<li class="menu-list-item">Home</li>
-					<li class="menu-list-item">About Us</li>
-					<li class="menu-list-item">Trips</li>
-					<li class="menu-list-item">FAQ and Safety</li>
-					<li class="menu-list-item">Contact</li>
+					<li class="menu-list-item" data-id="home" onclick="navigate(this)">Home</li>
+					<li class="menu-list-item" data-id="about" onclick="navigate(this)">About Us</li>
+					<li class="menu-list-item" data-id="trips" onclick="navigate(this)">Trips</li>
+					<li class="menu-list-item" data-id="safety" onclick="navigate(this)">FAQ and Safety</li>
+					<li class="menu-list-item" data-id="contact" onclick="navigate(this)">Contact</li>
 				</ul>
 			</div>
 			<div class="icons-box">
-				<i class="fab fa-facebook-square" id="facebook-icon"></i>
-				<i class="fab fa-instagram-square" id="instagram-icon"></i>
+				<a href="https://www.facebook.com/letsexploresydney/" target="_blank"><i class="fab fa-facebook-square"
+						id="facebook-icon"></i></a>
+				<a href="https://www.instagram.com/letsexploresydney/" target="_blank"><i
+						class="fab fa-instagram-square" id="instagram-icon"></i></a>
 			</div>
 		</nav>
-		<header class="header">
+		<header class="header" id="home">
 			<div class="video-container">
 				<video autoplay loop muted playsinline src="./images/bondi-video-1.mp4"></video>
 			</div>
@@ -44,19 +47,22 @@
 				<div class="logo-box">
 					<img src="./images/logo-les.png">
 				</div>
-				<button>See our trips</button>
+				<button data-id="trips" onclick="navigate(this)">See our trips</button>
 
 			</div>
 		</header>
-		<div class="intro-main-container">
+
+		<div class="intro-main-container" id="about">
 			<section class="intro-section">
 				<div class="container container-intro">
 					<div class="intro-section-text">
 						<h1>HELLO AND WELCOME TO SYDNEY!</h1>
-						<p>Be it for business or pleasure, Sydney is host to a huge variety of world famous attractions. we
+						<p>Be it for business or pleasure, Sydney is host to a huge variety of world famous attractions.
+							we
 							want to
 							share these with you.
-							Whether you are a regular traveller, or this is your first time to Sydney, be sure to book with
+							Whether you are a regular traveller, or this is your first time to Sydney, be sure to book
+							with
 							us for an
 							adventure you won’t ever forget.
 							Come on, Lets Explore Sydney!</p>
@@ -82,7 +88,7 @@
 				</div>
 			</section>
 		</div>
-		<section class="tours-section">
+		<section class="tours-section" id="trips">
 			<div class="container">
 				<div class="tours-container">
 
@@ -225,22 +231,23 @@
 
 
 				</div>
-				<i class="fas fa-chevron-left" id="tours-left-arrow"></i><i class="fas fa-chevron-right" id="tours-right-arrow"></i>
+				<i class="fas fa-chevron-left" id="tours-left-arrow"></i><i class="fas fa-chevron-right"
+					id="tours-right-arrow"></i>
 				<div class="book-now-button">
-					<button>Book Now</button>
+					<button data-id="contact" onclick="navigate(this)">Book Now</button>
 				</div>
 
 			</div>
 		</section>
 		<section class="highlighted-paragraph">
-			<div class="container">
+			<div class="container container-highlighted">
 				<p>The Australian climate is as beautiful as it is harsh.
 					We value safety as much as your enjoyment of the walk and remind you of a few simple actions you can
 					take to
 					make this walk as memorable and safe as possible.</p>
 			</div>
 		</section>
-		<section class="safety-section">
+		<section class="safety-section" id="safety">
 			<h1>SAFETY TIPS</h1>
 			<div class="container">
 				<div class="safety-tiles-container">
@@ -260,7 +267,9 @@
 								<div class=safety-icon-background><i class="fas fa-cloud-rain"></i></div>
 								<span class="safety-tile-title">Wet Weather</span>
 							</div>
-							<p class="safety-tile-paragraph"></p>
+							<p class="safety-tile-paragraph">Check the local weather forecast before heading out for the
+								tour. Prepare yourself with appropriate clothing for the day and weather. Remember to
+								pack a wind jacket or rain-jacket when rain or winds are forecast.</p>
 						</div>
 					</div>
 					<div class="safety-tile">
@@ -269,7 +278,9 @@
 								<div class=safety-icon-background><i class="fas fa-tint"></i></div>
 								<span class="safety-tile-title">Hydration</span>
 							</div>
-							<p class="safety-tile-paragraph"></p>	
+							<p class="safety-tile-paragraph">The walks can range from a few hours to a whole day. Please
+								bring a large water bottle (we recommend 1.5Lts). There are places to purchase or
+								refill your water, however we always recommend having enough on you.</p>
 						</div>
 					</div>
 					<div class="safety-tile">
@@ -280,7 +291,7 @@
 							</div>
 							<p class="safety-tile-paragraph">During severe lightning storms our guides will follow
 								standard procedures to ensure the safety of all our guests. On the approach of a severe
-								lightning storm, our guides will find a safe place to wait out the storm.</p>	
+								lightning storm, our guides will find a safe place to wait out the storm.</p>
 						</div>
 					</div>
 					<div class="safety-tile">
@@ -289,7 +300,9 @@
 								<div class=safety-icon-background><i class="fas fa-shoe-prints"></i></div>
 								<span class="safety-tile-title">Footwear</span>
 							</div>
-							<p class="safety-tile-paragraph"></p>	
+							<p class="safety-tile-paragraph">The walks can vary from concrete paths to gravel, steep
+								areas and open rock. Please ensure you wear closed shoes, with ankle protection, good
+								gripping soles. Strictly no thongs or sandals allowed.</p>
 						</div>
 					</div>
 					<div class="safety-tile">
@@ -298,7 +311,8 @@
 								<div class=safety-icon-background><i class="fas fa-swimmer"></i></div>
 								<span class="safety-tile-title">Swimming</span>
 							</div>
-							<p class="safety-tile-paragraph"></p>	
+							<p class="safety-tile-paragraph">Unfortunately, although we are walking past some of the
+								worlds best beaches, swimming is not allowed during the walk.</p>
 						</div>
 					</div>
 				</div>
@@ -313,50 +327,76 @@
 							<div class="question-and-icon">
 								<h6 class="question">Where do we meet?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
+								<p class="faq-answer">
+									Information regarding the meeting point will be sent to you via email once your
+									booking is confirmed. Check junk email just in case!
+								</p>
 							</div>
-							<p></p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">What should I bring?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
+								<p class="faq-answer">
+									Good walking shoes (thongs not permitted), water bottle (we will pass a number of
+									water fountains), sunscreen, hats, sunglasses, light snacks, swimmers and towel.
+								</p>
 							</div>
-							<p></p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">Do I need to book?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
+								<p class="faq-answer">
+									Yes. We recommend booking your guided tour as early as possible to ensure you get a
+									place. If you’d like to book at the last minute, just follow the booking
+									instructions and we’ll see you at one of the starting points!
+								</p>
 							</div>
-							<p></p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">Can I change my booking?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
+								<p class="faq-answer">
+									Sure can! We understand that sometimes last minute events can change your plans. As
+									long as you are no less than 48 hours from the time of your booking, you can log on
+									to your booking page and change to a more convenient time or date!
+								</p>
 							</div>
-							<p></p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">Do you walk in all weather?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
+								<p class="faq-answer">
+									Of course! Lets Explore Sydney is as good in the warm summer sun as it is in the
+									cold wintery rain. Whatever the weather, unless a major danger is forecast, we will
+									proceed with our walks.
+								</p>
 							</div>
-							<p></p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">How does cancelation work?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
+								<p class="faq-answer">
+									If you can no longer attend our walk, you may cancel your booking up to 48 hours
+									prior.
+								</p>
 							</div>
-							<p></p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">What about kids?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
+								<p class="faq-answer">
+									Whilst we don’t allow prams or wheelchairs (due to the terrain and stairs on the
+									walk) we have a happy policy that all kids under 12 (as long as they are accompanied
+									by an adult), have free entry to our tours (Subject to available spaces). Please
+									also note that any child under 18 must also be accompanied by an adult.
+								</p>
 							</div>
-							<p></p>
 						</div>
 					</div>
 				</div>
@@ -366,7 +406,7 @@
 				<div class="map-container"><img src="./images/map1.png"></div>
 			</div>
 		</section>
-		<section class="booking-section">
+		<section class="booking-section" id="contact">
 			<div class="container">
 				<h1>BOOK YOUR TRIP</h1>
 				<div class="form-container">
@@ -401,6 +441,7 @@
 			</div>
 		</footer>
 	</main>
+	<script src="./app.js"></script>
 </body>
 
 </html>

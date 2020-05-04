@@ -28,7 +28,13 @@ nav {
     grid-template-columns: repeat(12, 1fr);
     padding: 0 25px;
     height: 10vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
+
+
 
 .menu-box {
     display: none;
@@ -62,6 +68,11 @@ nav {
     font-style: normal;
     font-size: 30px;
     color: white;
+    cursor: pointer;
+}
+
+#facebook-icon:hover {
+    color: #DB9E69;
 }
 
 #instagram-icon {
@@ -69,6 +80,11 @@ nav {
     font-style: normal;
     font-size: 30px;
     color: white;
+    cursor: pointer;
+}
+
+#instagram-icon:hover {
+    color: #DB9E69;
 }
 
 header {
@@ -115,6 +131,7 @@ video {
 
 .logo-button-container button{
     grid-row: 10;
+    cursor: pointer;
 }
 
 .container {
@@ -181,6 +198,7 @@ video {
 .tours-section {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background-color: #FFFFF3;
 }
 
 .tours-section .container{
@@ -268,6 +286,7 @@ video {
 
 .book-now-button button {
     width: 100%;
+    cursor: pointer;
 }
 
 .highlighted-paragraph {
@@ -325,6 +344,7 @@ video {
     width: 240px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 
@@ -432,6 +452,12 @@ video {
     height: fit-content;
     width: 100%;
     border-bottom: white solid 2px;
+    text-align: left;
+}
+
+.faq-section h1 {
+    color: #E0DDD9;
+    border-color: #E0DDD9;
 }
 
 h6 {
@@ -450,6 +476,7 @@ h6 {
     border: #C3C3C5 solid 1.4px;
     border-radius: 10px;
     margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .question-and-icon {
@@ -466,6 +493,7 @@ h6 {
 
 .question-tile p {
     display: none;
+    color: white;
 }
 
 .meeting-section {
@@ -490,6 +518,7 @@ h6 {
 
 .booking-section h1{
     border-bottom: solid black 2px;
+    text-align: left;
 }
 
 .booking-section .container {
@@ -552,6 +581,12 @@ button {
     padding: 0 40px;
 }
 
+button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid #211A21;
+} 
+
 @media screen and (min-width: 700px) {
 
     button {
@@ -577,6 +612,7 @@ button {
         display: flex;
         align-self: flex-end;
         justify-content: center;
+        cursor: pointer;
     }
 
     
@@ -609,6 +645,11 @@ button {
 
     .menu-list-item {
         margin-right: 15px;
+        cursor: pointer;
+    }
+
+    .menu-list-item:hover {
+        color: #DB9E69;
     }
 
     .intro-main-container {
@@ -687,6 +728,10 @@ button {
     #tours-right-arrow,
     #tours-left-arrow {
         display: none;
+    }
+
+    .container-highlighted {
+        padding: 0 100px;
     }
 
     .safety-section {
