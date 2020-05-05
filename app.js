@@ -31,4 +31,32 @@ function missingInfo() {
     }
 }
 
-label.insertAdjacentText('afterend', 'My Plain Text..');
+
+
+var questionTile = document.getElementsByClassName("question-tile");
+
+
+for (i = 0; i < questionTile.length; i++) {
+
+    questionTile[i].addEventListener("click", function() {
+        let answerTile = document.getElementsByClassName("question-tile-shown");
+        console.log(answerTile);
+        if (answerTile.length >= 1) {
+            for (let i = 0; i < answerTile.length; i++) {
+                answerTile[i].classList.add("question-tile");
+                answerTile[i].classList.remove("question-tile-shown");
+            }
+            setTimeout(function(){ 
+                this.classList.add("question-tile-shown");
+         }, 1000);
+            
+
+        } else if (answerTile.length < 1){
+            console.log(123)
+            this.classList.add("question-tile-shown");
+            this.classList.remove("question-tile");
+    
+        }
+    
+    })
+}

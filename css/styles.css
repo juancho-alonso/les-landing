@@ -464,7 +464,7 @@ h6 {
     padding: 10px;
     font-size: 18px;
     margin: 0;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .question-tiles {
@@ -476,6 +476,35 @@ h6 {
     border-radius: 10px;
     margin-bottom: 8px;
     cursor: pointer;
+    transition: ease .5s;
+    padding: 0 15px;
+}
+
+.question-tile-shown {
+    color: #211A21;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: ease .5s;
+    padding: 0 15px 15px 15px;
+}
+
+.question-tile-shown h6 {
+    color:  #211A21;
+    font-weight: bold;
+}
+
+.question-tile-shown .question-icon {
+    transform: rotate(90deg);
+    color:  #211A21;
+    font-size: 18px;
+    transition: ease .2s;
+} 
+
+.question-tile-shown p {
+    display: block;
+    padding: 10px 10px 0 10px;
+    margin: 0;
 }
 
 .question-and-icon {
@@ -492,7 +521,6 @@ h6 {
 
 .question-tile p {
     display: none;
-    color: white;
 }
 
 .meeting-section {
