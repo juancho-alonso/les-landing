@@ -10,6 +10,8 @@
 	<meta name="Juancho" content="SitePoint">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property="og:image" content="./images/cover.jpg">
+	
+	<link rel="icon" href="./images/logo-les.png">
 	<link rel="stylesheet" href="./css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/bf35b084d0.js" crossorigin="anonymous"></script>
@@ -39,6 +41,18 @@
 						class="fab fa-instagram-square" id="instagram-icon"></i></a>
 			</div>
 		</nav>
+		<div id="hamburger-menu">
+			<div id="hamburger-menu-box">
+				<ul class="hamburger-menu-list">
+					<li class="hamburger-menu-item" data-id="home" onclick="navigate(this)">Home</li>
+					<li class="hamburger-menu-item" data-id="about" onclick="navigate(this)">About Us</li>
+					<li class="hamburger-menu-item" data-id="trips" onclick="navigate(this)">Trips</li>
+					<li class="hamburger-menu-item" data-id="safety" onclick="navigate(this)">FAQ and Safety</li>
+					<li class="hamburger-menu-item" data-id="contact" onclick="navigate(this)">Contact</li>
+				</ul>
+			</div>
+			<div id="menu-opaque"></div>
+		</div>
 		<header class="header" id="home">
 			<div class="video-container">
 				<video autoplay loop muted playsinline src="./images/bondi-video-1.mp4"></video>
@@ -52,7 +66,8 @@
 			</div>
 		</header>
 
-		<div class="intro-main-container" id="about">
+		<div class="intro-main-container navigation-box">
+			<div class="navigation" id="about"></div>
 			<section class="intro-section">
 				<div class="container container-intro">
 					<div class="intro-section-text">
@@ -74,7 +89,12 @@
 				<div class="container">
 					<div class="intro-section-image-dots">
 						<div class="intro-box-image">
-							<img src="./images/carousel1.png">
+							<img id="pic-auto" class="pic-auto" src="./images/0.jpg">
+							<img class="pic-auto" src="./images/1.jpg">
+							<img class="pic-auto" src="./images/2.jpg">
+							<img class="pic-auto" src="./images/3.jpg">
+							<img class="pic-auto" src="./images/4.jpg">
+							<img class="pic-auto" src="./images/5.jpg">
 						</div>
 						<div class="intro-section-dots">
 							<div class="intro-section-dot"></div>
@@ -88,149 +108,135 @@
 				</div>
 			</section>
 		</div>
-		<section class="tours-section" id="trips">
+		<section class="tours-section navigation-box">
+			<div class="navigation" id="trips"></div>
 			<div class="container">
-				<div class="tours-container">
-
-					<div class="tours-img-and-text">
-						<div class="tours-picture redpic">
-							<img src="./images/les-bondi-to-coogee.jpg">
-						</div>
-						<div class="tours-text">
-							<div class="tours-title-box">
-								<h2 class="tours-title">BONDI TO COOGEE</h2>
+				<div class="tours-slider">
+					<div class="tours-container" id="tours-slider-box">
+						<div class="tours-img-and-text">
+							<div class="tours-picture redpic">
+								<img src="./images/les-bondi-to-coogee.jpg">
 							</div>
-							<div class="tours-features">
-								<div class="tours-features-lenght">
-									<span class="tours-type">Half Day</span>
-									<span class="tours-time"> (3-4 hours) </span>
+							<div class="tours-text">
+								<div class="tours-title-box">
+									<h2 class="tours-title">BONDI TO COOGEE</h2>
 								</div>
-								<div class="tours-features-others">
-									<span class="tours-fitness">Fitness: Medium / </span>
-									<span class="tours-price">$200pp</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="tours-img-and-text">
-						<div class="tours-picture bluepic">
-							<img src="./images/les-blue-mountains.jpg">
-						</div>
-						<div class="tours-text">
-							<div class="tours-title-box">
-								<h2 class="tours-title">BLUE MOUNTAINS</h2>
-							</div>
-							<div class="tours-features">
-								<div class="tours-features-lenght">
-									<span class="tours-type">Full Day</span>
-									<span class="tours-time"> (8-9 hours) </span>
-								</div>
-								<div class="tours-features-others">
-									<span class="tours-fitness">Fitness: High / </span>
-									<span class="tours-price">$700pp</span>
+								<div class="tours-features">
+									<div class="tours-features-lenght">
+										<span class="tours-type">Half Day</span>
+										<span class="tours-time"> (3-4 hours) </span>
+									</div>
+									<div class="tours-features-others">
+										<span class="tours-fitness">Fitness: Medium / </span>
+										<span class="tours-price">$200pp</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-
-
-
-					<div class="tours-img-and-text">
-						<div class="tours-picture redpic">
-							<img src="./images/les-coogee-to-bondi.jpg">
-						</div>
-						<div class="tours-text">
-							<div class="tours-title-box">
-								<h2 class="tours-title">COOGEE TO BONDI</h2>
+						<div class="tours-img-and-text">
+							<div class="tours-picture bluepic">
+								<img src="./images/les-blue-mountains.jpg">
 							</div>
-							<div class="tours-features">
-								<div class="tours-features-lenght">
-									<span class="tours-type">Half Day</span>
-									<span class="tours-time"> (3-4 hours) </span>
+							<div class="tours-text">
+								<div class="tours-title-box">
+									<h2 class="tours-title">BLUE MOUNTAINS</h2>
 								</div>
-								<div class="tours-features-others">
-									<span class="tours-fitness">Fitness: Medium / </span>
-									<span class="tours-price">$200pp</span>
+								<div class="tours-features">
+									<div class="tours-features-lenght">
+										<span class="tours-type">Full Day</span>
+										<span class="tours-time"> (8-9 hours) </span>
+									</div>
+									<div class="tours-features-others">
+										<span class="tours-fitness">Fitness: High / </span>
+										<span class="tours-price">$700pp</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-
-
-
-					<div class="tours-img-and-text">
-						<div class="tours-picture bluepic">
-							<img src="./images/les-malabar-headland.jpg">
-						</div>
-						<div class="tours-text">
-							<div class="tours-title-box">
-								<h2 class="tours-title">MALABAR HEADLANDS</h2>
+						<div class="tours-img-and-text">
+							<div class="tours-picture redpic">
+								<img src="./images/les-coogee-to-bondi.jpg">
 							</div>
-							<div class="tours-features">
-								<div class="tours-features-lenght">
-									<span class="tours-type">Full Day</span>
-									<span class="tours-time"> (10-12 hours) </span>
+							<div class="tours-text">
+								<div class="tours-title-box">
+									<h2 class="tours-title">COOGEE TO BONDI</h2>
 								</div>
-								<div class="tours-features-others">
-									<span class="tours-fitness">Fitness: Medium / </span>
-									<span class="tours-price">$270pp</span>
+								<div class="tours-features">
+									<div class="tours-features-lenght">
+										<span class="tours-type">Half Day</span>
+										<span class="tours-time"> (3-4 hours) </span>
+									</div>
+									<div class="tours-features-others">
+										<span class="tours-fitness">Fitness: Medium / </span>
+										<span class="tours-price">$200pp</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-
-
-
-					<div class="tours-img-and-text">
-						<div class="tours-picture redpic">
-							<img src="./images/les-south-coast.jpg">
-						</div>
-						<div class="tours-text">
-							<div class="tours-title-box">
-								<h2 class="tours-title">SOUTH COAST</h2>
+						<div class="tours-img-and-text">
+							<div class="tours-picture bluepic">
+								<img src="./images/les-malabar-headland.jpg">
 							</div>
-							<div class="tours-features">
-								<div class="tours-features-lenght">
-									<span class="tours-type">Full Day</span>
-									<span class="tours-time"> (7-8 hours) </span>
+							<div class="tours-text">
+								<div class="tours-title-box">
+									<h2 class="tours-title">MALABAR HEADLANDS</h2>
 								</div>
-								<div class="tours-features-others">
-									<span class="tours-fitness">Fitness: Medium / </span>
-									<span class="tours-price">$270pp</span>
+								<div class="tours-features">
+									<div class="tours-features-lenght">
+										<span class="tours-type">Full Day</span>
+										<span class="tours-time"> (10-12 hours) </span>
+									</div>
+									<div class="tours-features-others">
+										<span class="tours-fitness">Fitness: Medium / </span>
+										<span class="tours-price">$270pp</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-
-
-
-					<div class="tours-img-and-text">
-						<div class="tours-picture bluepic">
-							<img src="./images/les-royal-national-park.jpg">
-						</div>
-						<div class="tours-text">
-							<div class="tours-title-box">
-								<h2 class="tours-title">ROYAL NATIONAL PARK</h2>
+						<div class="tours-img-and-text">
+							<div class="tours-picture redpic">
+								<img src="./images/les-south-coast.jpg">
 							</div>
-							<div class="tours-features">
-								<div class="tours-features-lenght">
-									<span class="tours-type">Full Day</span>
-									<span class="tours-time"> (8-9 hours) </span>
+							<div class="tours-text">
+								<div class="tours-title-box">
+									<h2 class="tours-title">SOUTH COAST</h2>
 								</div>
-								<div class="tours-features-others">
-									<span class="tours-fitness">Fitness: High / </span>
-									<span class="tours-price">$300pp</span>
+								<div class="tours-features">
+									<div class="tours-features-lenght">
+										<span class="tours-type">Full Day</span>
+										<span class="tours-time"> (7-8 hours) </span>
+									</div>
+									<div class="tours-features-others">
+										<span class="tours-fitness">Fitness: Medium / </span>
+										<span class="tours-price">$270pp</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tours-img-and-text">
+							<div class="tours-picture bluepic">
+								<img src="./images/les-royal-national-park.jpg">
+							</div>
+							<div class="tours-text">
+								<div class="tours-title-box">
+									<h2 class="tours-title">ROYAL NATIONAL PARK</h2>
+								</div>
+								<div class="tours-features">
+									<div class="tours-features-lenght">
+										<span class="tours-type">Full Day</span>
+										<span class="tours-time"> (8-9 hours) </span>
+									</div>
+									<div class="tours-features-others">
+										<span class="tours-fitness">Fitness: High / </span>
+										<span class="tours-price">$300pp</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-
-
 				</div>
+
+
 				<i class="fas fa-chevron-left" id="tours-left-arrow"></i><i class="fas fa-chevron-right"
 					id="tours-right-arrow"></i>
 				<div class="book-now-button">
@@ -247,7 +253,8 @@
 					make this walk as memorable and safe as possible.</p>
 			</div>
 		</section>
-		<section class="safety-section" id="safety">
+		<section class="safety-section navigation-box">
+			<div class="navigation" id="safety"></div>
 			<h1>SAFETY TIPS</h1>
 			<div class="container">
 				<div class="safety-tiles-container">
@@ -328,85 +335,88 @@
 								<h6 class="question">Where do we meet?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
 							</div>
-								<p class="faq-answer">
-									Information regarding the meeting point will be sent to you via email once your
-									booking is confirmed. Check junk email just in case!
-								</p>
+							<p class="faq-answer">
+								For the Bondi to Coogee walk, we meet at Bondi Icebergs. Information regarding other
+								meeting points
+								will be sent to you via email once your
+								booking is confirmed. Check junk email just in case!
+							</p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">What should I bring?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
 							</div>
-								<p class="faq-answer">
-									Good walking shoes (thongs not permitted), water bottle (we will pass a number of
-									water fountains), sunscreen, hats, sunglasses, light snacks, swimmers and towel.
-								</p>
+							<p class="faq-answer">
+								Good walking shoes (thongs not permitted), water bottle (we will pass a number of
+								water fountains), sunscreen, hats, sunglasses, light snacks, swimmers and towel.
+							</p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">Do I need to book?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
 							</div>
-								<p class="faq-answer">
-									Yes. We recommend booking your guided tour as early as possible to ensure you get a
-									place. If you’d like to book at the last minute, just follow the booking
-									instructions and we’ll see you at one of the starting points!
-								</p>
+							<p class="faq-answer">
+								Yes. We recommend booking your guided tour as early as possible to ensure you get a
+								place. If you’d like to book at the last minute, just follow the booking
+								instructions and we’ll see you at one of the starting points!
+							</p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">Can I change my booking?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
 							</div>
-								<p class="faq-answer">
-									Sure can! We understand that sometimes last minute events can change your plans. As
-									long as you are no less than 48 hours from the time of your booking, you can log on
-									to your booking page and change to a more convenient time or date!
-								</p>
+							<p class="faq-answer">
+								Sure can! We understand that sometimes last minute events can change your plans. As
+								long as you are no less than 48 hours from the time of your booking, you can log on
+								to your booking page and change to a more convenient time or date!
+							</p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">Do you walk in all weather?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
 							</div>
-								<p class="faq-answer">
-									Of course! Lets Explore Sydney is as good in the warm summer sun as it is in the
-									cold wintery rain. Whatever the weather, unless a major danger is forecast, we will
-									proceed with our walks.
-								</p>
+							<p class="faq-answer">
+								Of course! Lets Explore Sydney is as good in the warm summer sun as it is in the
+								cold wintery rain. Whatever the weather, unless a major danger is forecast, we will
+								proceed with our walks.
+							</p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">How does cancelation work?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
 							</div>
-								<p class="faq-answer">
-									If you can no longer attend our walk, you may cancel your booking up to 48 hours
-									prior.
-								</p>
+							<p class="faq-answer">
+								If you can no longer attend our walk, you may cancel your booking up to 48 hours
+								prior.
+							</p>
 						</div>
 						<div class="question-tile">
 							<div class="question-and-icon">
 								<h6 class="question">What about kids?</h6>
 								<div class="question-icon"><i class="fas fa-chevron-right"></i></div>
 							</div>
-								<p class="faq-answer">
-									Whilst we don’t allow prams or wheelchairs (due to the terrain and stairs on the
-									walk) we have a happy policy that all kids under 12 (as long as they are accompanied
-									by an adult), have free entry to our tours (Subject to available spaces). Please
-									also note that any child under 18 must also be accompanied by an adult.
-								</p>
+							<p class="faq-answer">
+								Whilst we don’t allow prams or wheelchairs (due to the terrain and stairs on the
+								walk) we have a happy policy that all kids under 12 (as long as they are accompanied
+								by an adult), have free entry to our tours (Subject to available spaces). Please
+								also note that any child under 18 must also be accompanied by an adult.
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="meeting-section">
-				<h1>MEETING POINT</h1>
+				<h1>MEETING POINT BONDI</h1>
 				<div class="map-container"><img src="./images/map1.png"></div>
 			</div>
 		</section>
-		<section class="booking-section" id="contact">
+		<section class="booking-section navigation-box">
+			<div class="navigation" id="contact"></div>
 			<div class="container">
 				<h1>BOOK YOUR TRIP</h1>
 				<div class="form-container">
@@ -420,14 +430,16 @@
 						<div class="email-container">
 							<form>
 								<label for="email" class="labels">Email</label>
-								<input type="email" id="email" class="inputs" name="email" placeholder="janedoe@mail.com">
+								<input type="email" id="email" class="inputs" name="email"
+									placeholder="janedoe@mail.com">
 							</form>
 						</div>
 					</div>
 					<div class="message-container">
 						<form action="/action_page.php">
 							<label for="message" class="labels">Message</label>
-							<input type="text" id="message" class="inputs" name="message" placeholder="Your message, here...">
+							<input type="text" id="message" class="inputs" name="message"
+								placeholder="Your message, here...">
 						</form>
 					</div>
 				</div>

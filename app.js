@@ -1,9 +1,101 @@
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+  }
+
+
+document.getElementById("hamburger-icon").addEventListener("click", toggleMenu);
+document.getElementById("menu-opaque").addEventListener("click", collapseMenu);
+
+
+window.addEventListener('load', carousel);
+
+var slideIndex = 0;
+
+function carousel() {
+    //dame todas las img
+  var pictures = document.getElementsByClassName("pic-auto");
+  var dots = document.getElementsByClassName("intro-section-dot");
+  //que no se vea ninguna imagen
+  for (i = 0; i < pictures.length; i++) {
+    pictures[i].style.display = "none";
+    dots[i].style.backgroundColor = "#D0D0D0";
+  }
+  //sumame 1 al contador que me dice cuantas veces corri la funcion
+  slideIndex++
+  //si el contador de funcionjes es mauyor a la cant de img, resetealo
+  if (slideIndex > pictures.length) {
+      slideIndex = 1
+    }
+  //a la imagen en el array, en la posicion (valor del contador - 1) mostramela
+  pictures[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].style.backgroundColor = "#3A3A3C";
+  setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+
+
+function toggleMenu(){
+    var hamburgerMenu = document.getElementById("hamburger-menu");
+    console.log(hamburgerMenu.style)
+    if (hamburgerMenu.style.display === ""){
+        hamburgerMenu.style.display = "block";
+    } else if (hamburgerMenu.style.display === "block"){
+        hamburgerMenu.style.display = "";
+    }
+}
+
+function collapseMenu() {
+    var hamburgerMenu = document.getElementById("hamburger-menu");
+    hamburgerMenu.style.display = "";
+}
+
+function scrollBack() {
+    document.getElementById(dataId).scrollTop = 100;
+}
+
 function navigate(id) {
     const dataId = id.getAttribute("data-id");
+    var hamburgerMenu = document.getElementById("hamburger-menu");
     document.getElementById(dataId).scrollIntoView({behavior: 'smooth'});
-    document.getElementById(dataId).scrollTop -= 10;
+    if (hamburgerMenu.style.display === "block"){
+        hamburgerMenu.style.display = "";
+    }
     
 };
+
+// -----------------   TOUR SLIDER   ------------------------------------------------------- 
+
+document.getElementById("tours-right-arrow").addEventListener("click", slideTourLeft);
+document.getElementById("tours-left-arrow").addEventListener("click", slideTourRight);
+var sliderTour = document.getElementById("tours-slider-box");
+var clicks = 0;
+const tourPictures = document.getElementsByClassName("tours-picture");
+var slidePerClick = 100 / tourPictures.length;
+var viewportWidth = window.innerWidth;
+
+
+function slideTourLeft(){
+    clicks++;
+    if (viewportWidth > 900 && clicks >= 3) {
+        clicks = 3;
+    } else if (viewportWidth > 420 && clicks >= 4){
+            clicks = 4;
+        } else if (viewportWidth < 420 && clicks >= 5){
+            clicks = 5;
+        } ;
+    sliderTour.style.left = "-300" * clicks + "px";
+}
+
+function slideTourRight(){
+    clicks--;
+    if (viewportWidth > "420" && clicks <= 0){
+        clicks = 0;
+    } else if (viewportWidth < "420" && clicks <= 0){
+        clicks = 0;
+    };
+    sliderTour.style.left = "-300" * clicks + "px";
+}
+
+// ------------------------------------------------------------------------------------------
 
 var inputs = document.getElementsByClassName("inputs");
 
@@ -31,7 +123,7 @@ function missingInfo() {
     }
 }
 
-
+//--------------------- QUESTION TILES ---------------------------------------------
 
 var questionTile = document.getElementsByClassName("question-tile");
 
@@ -40,7 +132,6 @@ for (i = 0; i < questionTile.length; i++) {
 
     questionTile[i].addEventListener("click", function() {
         let answerTile = document.getElementsByClassName("question-tile-shown");
-        console.log(answerTile);
         if (answerTile.length >= 1) {
             for (let i = 0; i < answerTile.length; i++) {
                 answerTile[i].classList.add("question-tile");
@@ -52,7 +143,6 @@ for (i = 0; i < questionTile.length; i++) {
             
 
         } else if (answerTile.length < 1){
-            console.log(123)
             this.classList.add("question-tile-shown");
             this.classList.remove("question-tile");
     
@@ -60,3 +150,5 @@ for (i = 0; i < questionTile.length; i++) {
     
     })
 }
+
+//----------------------------------------------------------------------------------
