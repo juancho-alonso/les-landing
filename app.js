@@ -1,5 +1,6 @@
 window.onbeforeunload = function() {
     window.scrollTo(0, 0);
+    initMap();
   }
 
 
@@ -68,8 +69,6 @@ document.getElementById("tours-right-arrow").addEventListener("click", slideTour
 document.getElementById("tours-left-arrow").addEventListener("click", slideTourRight);
 var sliderTour = document.getElementById("tours-slider-box");
 var clicks = 0;
-const tourPictures = document.getElementsByClassName("tours-picture");
-var slidePerClick = 100 / tourPictures.length;
 var viewportWidth = window.innerWidth;
 
 
@@ -93,6 +92,39 @@ function slideTourRight(){
         clicks = 0;
     };
     sliderTour.style.left = "-300" * clicks + "px";
+}
+
+// ------------------------------------------------------------------------------------------
+
+//--------------------------SAFETY-SLIDER--------------------------------------------
+document.getElementById("safety-right-arrow").addEventListener("click", slideTileLeft);
+document.getElementById("safety-left-arrow").addEventListener("click", slideTileRight);
+var sliderTile = document.getElementById("safety-slider-box");
+var clicks = 0;
+var viewportWidth = window.innerWidth;
+
+
+function slideTileLeft(){
+    clicks++;
+    console.log(clicks)
+    if (viewportWidth > 900 && clicks >= 3) {
+        clicks = 3;
+    } else if (viewportWidth < 900 && viewportWidth > 600 && clicks >= 4){
+            clicks = 4;
+        } else if (viewportWidth < 420 && clicks >= 5){
+            clicks = 5;
+        } ;
+    sliderTile.style.left = "-255" * clicks + "px";
+}
+
+function slideTileRight(){
+    clicks--;
+    if (viewportWidth > "420" && clicks <= 0){
+        clicks = 0;
+    } else if (viewportWidth < "420" && clicks <= 0){
+        clicks = 0;
+    };
+    sliderTile.style.left = "-255" * clicks + "px";
 }
 
 // ------------------------------------------------------------------------------------------
@@ -151,4 +183,13 @@ for (i = 0; i < questionTile.length; i++) {
     })
 }
 
+//----------------------------------------------------------------------------------
+
+//----------------------MAP-MEETING-POINT-------------------------------------------
+function initMap() {
+    var meetingPoint = {lat: -33.895241, lng: 151.274413}; 
+    var map = new google.maps.Map(
+        document.getElementById("meeting-map"), {zoom: 15, center: meetingPoint, disableDefaultUI: true});
+    var marker = new google.maps.Marker({position: meetingPoint, map: map});
+  }
 //----------------------------------------------------------------------------------
