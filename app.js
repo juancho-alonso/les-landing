@@ -148,9 +148,7 @@ document.getElementById("send-btn").addEventListener("click", missingInfo);
 function missingInfo() {
     for (i = 0; i < inputs.length; i++) {    
         if (inputs[i].value === ""){
-           // labels[i].insertAdjacentText('afterend', "Please fill this field!");
         } else if (labels[i].value !== ""){
-           // labels[i].removeChild(labels[i].childNodes[0]);
         }
     }
 }
