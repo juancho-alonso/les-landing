@@ -662,6 +662,7 @@ input {
     font-family: 'Lato', sans-serif;
     padding-left: 15px;
     outline-color: transparent;
+    font-size: 14px;
 }
 
 footer {
@@ -727,6 +728,7 @@ button {
         display: flex;
         align-self: flex-end;
         justify-content: center;
+        align-items: center;
         cursor: pointer;
     }
 
