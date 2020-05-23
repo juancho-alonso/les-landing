@@ -13,26 +13,22 @@ window.addEventListener('load', carousel);
 var slideIndex = 0;
 
 function carousel() {
-    //dame todas las img
   var pictures = document.getElementsByClassName("pic-auto");
   var dots = document.getElementsByClassName("intro-section-dot");
-  //que no se vea ninguna imagen
   for (i = 0; i < pictures.length; i++) {
     pictures[i].style.display = "none";
     dots[i].style.backgroundColor = "#D0D0D0";
   }
-  //sumame 1 al contador que me dice cuantas veces corri la funcion
   slideIndex++
-  //si el contador de funcionjes es mauyor a la cant de img, resetealo
   if (slideIndex > pictures.length) {
       slideIndex = 1
     }
-  //a la imagen en el array, en la posicion (valor del contador - 1) mostramela
   pictures[slideIndex-1].style.display = "block";
   dots[slideIndex-1].style.backgroundColor = "#3A3A3C";
-  setTimeout(carousel, 3000); // Change image every 3 seconds
+  setTimeout(carousel, 3000); 
 }
 
+//---------MENU-BEHAVIOUR--------------
 
 function toggleMenu(){
     var hamburgerMenu = document.getElementById("hamburger-menu");
@@ -127,7 +123,7 @@ function slideTileRight(){
     sliderTile.style.left = "-255" * clicks + "px";
 }
 
-// ------------------------------------------------------------------------------------------
+// ----------------------------------FORM-VALIDATION-------------------------------------------------
 
 var inputs = document.getElementsByClassName("inputs");
 
